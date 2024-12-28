@@ -65,10 +65,10 @@ const Surah: NextPage = () => {
             transition={{ duration: 1.2 }}
           >
             <Typography className={fonts.crimson.className} fontSize={16}>
-              "Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri
+              {`"Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan untukmu isteri-isteri
               dari jenismu sendiri, supaya kamu cenderung dan merasa tenteram kepadanya, dan
               dijadikan-Nya diantaramu rasa kasih dan sayang. Sesungguhnya pada yang demikian itu
-              benar-benar terdapat tanda-tanda bagi kaum yang berfikir. - Ar Ruum 21"
+              benar-benar terdapat tanda-tanda bagi kaum yang berfikir. - Ar Ruum 21"`}
             </Typography>
           </motion.div>
         </Stack>
