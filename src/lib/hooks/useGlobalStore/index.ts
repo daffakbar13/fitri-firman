@@ -21,7 +21,7 @@ const useGlobalStore = create<UseGlobalStore>((set, get) => ({
       backsound: '/audios/backsound.mp3',
     },
     images: {
-      bb: '/images/IMG_7954.JPG',
+      bb: '/images/IMG_7954.jpg',
       bg1: '/images/background-1.jpg',
       bg2: '/images/background-2.jpg',
       bg3: '/images/background-3.webp',
@@ -61,7 +61,7 @@ const useGlobalStore = create<UseGlobalStore>((set, get) => ({
       gallery25: '/images/gallery-25.jpg',
       moon: '/images/moon.webp',
       patren: '/images/patren.webp',
-      profileFitri: '/images/IMG_8645.JPG',
+      profileFitri: '/images/IMG_8645.jpg',
       profileFirman: '/images/profile-ahmad.webp',
       separatorLine: '/images/separator-line.png',
     },
