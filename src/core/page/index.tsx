@@ -20,9 +20,11 @@ import Wishes from '../sections/Wishes'
 const Page: NextPage = () => {
   const { isOpenedInvitation, media, setIsFullScreen, setActiveScreen, closeInvitation, setMedia } =
     useGlobalStore()
-  const isContentLoaded = [media.videos.opening, media.audios.backsound].every((e) =>
-    e.includes('blob'),
-  )
+  const isContentLoaded = [
+    media.videos.opening,
+    media.videos.cinematic,
+    media.audios.backsound,
+  ].every((e) => e.includes('blob'))
 
   async function hitFile(file: string) {
     if (file.includes('blob')) {

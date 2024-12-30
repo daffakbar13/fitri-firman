@@ -41,8 +41,8 @@ const Cover: NextPage = () => {
       sx={{
         backgroundImage: `url(${media.images.gallery18})`,
         backgroundRepeat: 'no-repeat',
-        backgroundSize: '130%',
-        backgroundPosition: '-80px top',
+        backgroundSize: 'cover',
+        backgroundPosition: 'bottom center',
       }}
     >
       <motion.div
