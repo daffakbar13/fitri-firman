@@ -70,15 +70,13 @@ const Gallery: NextPage = () => {
           },
         }}
       >
-        <Box display="flex">{renderImages(false, 'gallery8', 'gallery3')}</Box>
-        <Box display="flex">{renderImages(false, 'gallery5', 'gallery21')}</Box>
-        <Box display="flex">{renderImages(true, 'gallery12')}</Box>
-        <Box display="flex">{renderImages(false, 'gallery6', 'gallery18')}</Box>
         <Box display="flex">{renderImages(true, 'gallery14')}</Box>
-        <Box display="flex">{renderImages(false, 'gallery2', 'gallery13')}</Box>
+        <Box display="flex">{renderImages(false, 'gallery8', 'gallery3')}</Box>
         <Box display="flex">{renderImages(true, 'gallery16')}</Box>
-        <Box display="flex">{renderImages(false, 'gallery15', 'gallery7')}</Box>
+        <Box display="flex">{renderImages(false, 'gallery5', 'gallery21', 'gallery15')}</Box>
         <Box display="flex">{renderImages(true, 'gallery17')}</Box>
+        <Box display="flex">{renderImages(false, 'gallery2', 'gallery6', 'gallery7')}</Box>
+        <Box display="flex">{renderImages(true, 'gallery12')}</Box>
       </Stack>
       <Dialog open={previewGallery !== null} fullWidth onClose={closePreviewGallery}>
         {previewGallery && (
