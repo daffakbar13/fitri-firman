@@ -143,18 +143,16 @@ const Profile: NextPage = () => {
                           bgcolor: 'secondary.main',
                           cursor: 'pointer',
                         }}
+                        onClick={() =>
+                          window.open(
+                            'https://instagram.com/'.concat(
+                              isMale ? 'ftridamayanti' : 'ftridamayanti',
+                            ),
+                            '_blank',
+                          )
+                        }
                       >
-                        <InstagramIcon
-                          fontSize={'medium'}
-                          onClick={() =>
-                            window.open(
-                              'https://instagram.com/'.concat(
-                                isMale ? 'ftridamayanti' : 'ftridamayanti',
-                              ),
-                              '_blank',
-                            )
-                          }
-                        />
+                        <InstagramIcon fontSize={'medium'} />
                       </Box>
                     </Stack>
                   </motion.div>
