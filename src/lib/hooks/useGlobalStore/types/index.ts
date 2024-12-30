@@ -12,19 +12,17 @@ interface Media {
     backsound: string
   }
   images: {
-    bb: string
     bg1: string
     bg2: string
     bg3: string
     bg4: string
     bg5: string
+    bg6: string
     bgBank: string
     bca: string
+    bri: string
     chipAtm: string
     dana: string
-    forest1: string
-    forest3: string
-    forest6: string
     gallery1: string
     gallery2: string
     gallery3: string
@@ -47,13 +45,8 @@ interface Media {
     gallery20: string
     gallery21: string
     gallery22: string
-    gallery23: string
-    gallery24: string
-    gallery25: string
     moon: string
     patren: string
-    profileFitri: string
-    profileFirman: string
     separatorLine: string
   }
 }

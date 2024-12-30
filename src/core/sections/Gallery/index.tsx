@@ -20,17 +20,17 @@ const Card = ({ children }: React.PropsWithChildren) => (
 const Gallery: NextPage = () => {
   const { previewGallery, media, openPreviewGallery, closePreviewGallery } = useGlobalStore()
 
-  const renderImages = (isLandscape: boolean, ...images: string[]) =>
-    images.map((img, i) => (
+  const renderImages = (isLandscape: boolean, ...images: (keyof typeof media.images)[]) =>
+    images.map((key, i) => (
       <Card key={i}>
         <Image
-          src={img}
+          src={media.images[key]}
           height={100}
           width={100}
-          alt={'gallery'}
+          alt={key}
           quality={1}
           style={{ ...(isLandscape && { aspectRatio: 'unset' }) }}
-          onClick={openPreviewGallery(img)}
+          onClick={openPreviewGallery(media.images[key])}
         />
       </Card>
     ))
@@ -38,112 +38,60 @@ const Gallery: NextPage = () => {
   return (
     <Section
       justifyContent="start"
+      gap={4}
       paddingX={2}
       paddingY={9}
       sx={{
         backgroundColor: 'primary.main',
       }}
     >
-      <Box
-        position="absolute"
-        top={0}
-        bottom={0}
-        left={0}
-        right={0}
-        zIndex={1}
-        borderRadius={2.5}
+      <motion.div
+        initial={{ translateY: -50 }}
+        whileInView={{ translateY: 0 }}
+        transition={{ duration: 1.2 }}
+      >
+        <Typography className={fonts.astonScript.className} fontSize={30} color="white">
+          Gallery
+        </Typography>
+      </motion.div>
+      <Stack
+        gap={0.5}
+        flex={1}
+        width="100%"
         sx={{
-          backgroundImage: `url(${media.images.patren})`,
-          backgroundRepeat: 'repeat',
-          backgroundSize: 'contain',
-          opacity: 0.2,
-          pointerEvents: 'none',
+          '> *': { gap: 1 },
+          '> * > *': { flex: 1, cursor: 'pointer' },
+          img: {
+            width: '100%',
+            height: 'auto',
+            borderRadius: 0.5,
+            objectFit: 'cover',
+            aspectRatio: '191/286',
+          },
         }}
-      />
-      <Stack position="relative" gap={4} zIndex={2}>
-        <motion.div
-          initial={{ translateY: -50 }}
-          whileInView={{ translateY: 0 }}
-          transition={{ duration: 1.2 }}
-        >
-          <Typography className={fonts.pinyon.className} fontSize={50} color="secondary">
-            Our Gallery
-          </Typography>
-        </motion.div>
-        <Stack
-          gap={0.5}
-          flex={1}
-          width="100%"
-          sx={{
-            '> *': { gap: 1 },
-            '> * > *': { flex: 1, cursor: 'pointer' },
-            img: {
-              width: '100%',
-              height: 'auto',
-              borderRadius: 0.5,
-              objectFit: 'cover',
-              aspectRatio: '191/286',
-            },
-          }}
-        >
-          <Box display="flex">
-            {renderImages(false, media.images.gallery7, media.images.gallery5)}
-          </Box>
-          <Box display="flex">{renderImages(true, media.images.gallery2)}</Box>
-          <Box display="flex">
-            {renderImages(false, media.images.gallery3, media.images.gallery6)}
-          </Box>
-          <Box display="flex">{renderImages(true, media.images.gallery4)}</Box>
-          <Box display="flex">
-            {renderImages(false, media.images.gallery9, media.images.gallery10)}
-          </Box>
-          <Box display="flex">{renderImages(true, media.images.gallery8)}</Box>
-          <Box display="flex">
-            {renderImages(false, media.images.gallery11, media.images.gallery12)}
-          </Box>
-          <Box display="flex">
-            {renderImages(false, media.images.gallery13, media.images.gallery15)}
-          </Box>
-          <Box display="flex">
-            {renderImages(false, media.images.gallery16, media.images.gallery17)}
-          </Box>
-          <Box display="flex">
-            {renderImages(false, media.images.gallery18, media.images.gallery19)}
-          </Box>
-          <Box display="flex">
-            {renderImages(false, media.images.gallery21, media.images.gallery23)}
-          </Box>
-          <Box display="flex">
-            {renderImages(false, media.images.gallery24, media.images.gallery25)}
-          </Box>
-
-          {/* <Box display="flex" flexBasis="30%">
-          {renderImages(true, media.images.biruLandscape)}
-        </Box>
-        <Box display="flex">
-          {renderImages(false, media.images.biru3, media.images.biru4, media.images.biru5)}
-        </Box>
-        <Box display="flex">{renderImages(false, media.images.jawa4, media.images.jawa5)}</Box>
-        <Box display="flex" flexBasis="40%">
-          {renderImages(true, media.images.jawaLandscape)}
-        </Box>
-        <Box display="flex">
-          {renderImages(false, media.images.jawa2, media.images.jawa1, media.images.jawa3)}
-        </Box> */}
-        </Stack>
-        <Dialog open={previewGallery !== null} fullWidth onClose={closePreviewGallery}>
-          {previewGallery && (
-            <Image
-              src={previewGallery}
-              height={100}
-              width={100}
-              alt={'gallery'}
-              quality={10}
-              style={{ width: '100%', height: 'auto' }}
-            />
-          )}
-        </Dialog>
+      >
+        <Box display="flex">{renderImages(false, 'gallery8', 'gallery3')}</Box>
+        <Box display="flex">{renderImages(false, 'gallery5', 'gallery21')}</Box>
+        <Box display="flex">{renderImages(true, 'gallery12')}</Box>
+        <Box display="flex">{renderImages(false, 'gallery6', 'gallery18')}</Box>
+        <Box display="flex">{renderImages(true, 'gallery14')}</Box>
+        <Box display="flex">{renderImages(false, 'gallery2', 'gallery13')}</Box>
+        <Box display="flex">{renderImages(true, 'gallery16')}</Box>
+        <Box display="flex">{renderImages(false, 'gallery15', 'gallery7')}</Box>
+        <Box display="flex">{renderImages(true, 'gallery17')}</Box>
       </Stack>
+      <Dialog open={previewGallery !== null} fullWidth onClose={closePreviewGallery}>
+        {previewGallery && (
+          <Image
+            src={previewGallery}
+            height={100}
+            width={100}
+            alt={'gallery'}
+            quality={10}
+            style={{ width: '100%', height: 'auto' }}
+          />
+        )}
+      </Dialog>
     </Section>
   )
 }

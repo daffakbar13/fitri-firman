@@ -1,5 +1,5 @@
 import CardGiftcardRoundedIcon from '@mui/icons-material/CardGiftcardRounded'
-import { CircularProgress } from '@mui/material'
+import { CircularProgress, Divider } from '@mui/material'
 import Box from '@mui/material/Box'
 import Button from '@mui/material/Button'
 import Stack from '@mui/material/Stack'
@@ -36,11 +36,13 @@ const Cover: NextPage = () => {
     <Section
       gap={2}
       flex={1}
+      justifyContent="end"
+      pb={10}
       sx={{
-        backgroundImage: `url(${media.images.bg1})`,
+        backgroundImage: `url(${media.images.gallery18})`,
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center bottom',
+        backgroundSize: '130%',
+        backgroundPosition: '-80px top',
       }}
     >
       <motion.div
@@ -50,23 +52,25 @@ const Cover: NextPage = () => {
         transition={{ duration: 1.2 }}
       >
         <Stack justifyContent="center" alignItems="center" height="inherit" gap={2}>
-          <Typography className={fonts.crimson.className} fontSize={18}>
-            THE WEDDING OF
-          </Typography>
           <Stack>
-            <Typography color="primary" className={fonts.crimson.className} fontSize={40}>
-              Fitri
-              <br /> & <br />
-              Firman
+            <Typography className={fonts.crimson.className} fontSize={18}>
+              WEDDING INVITATION
+            </Typography>
+            <Typography className={fonts.gilda.className} fontSize={28}>
+              FITRI & FIRMAN
             </Typography>
           </Stack>
-          <Typography className={fonts.montserrat.className} fontSize={15} fontWeight="bold">
+          <Divider sx={{ width: '110%', borderColor: 'white' }} />
+          <Typography className={fonts.crimson.className} fontSize={18}>
             Dear,
             <br />
             {to || 'Guest Name'}
           </Typography>
-          <Button onClick={onOpenInvitation}>
-            Open Invitation &nbsp;
+          <Button
+            sx={{ background: 'linear-gradient(200deg, #000000 0%, #474747 100%) !important' }}
+            onClick={onOpenInvitation}
+          >
+            OPEN INVITATION &nbsp;
             {!isContentLoaded && isOpenedInvitation && (
               <CircularProgress size={12} color="warning" />
             )}

@@ -96,17 +96,17 @@ const Gift: NextPage = () => {
           <Stack gap={2} alignItems="center">
             {[
               {
-                name: 'Firman Fauzi',
-                cardNumber: '123 123 1234',
-                logo: media.images.bca,
+                name: 'Ceceng Firman Nursaleh',
+                cardNumber: '4061 0101 4607 531',
+                logo: media.images.bri,
                 isBank: true,
                 isGift: false,
               },
               {
                 name: 'Fitri Damayanti',
-                cardNumber: '0822 6243 4804',
-                logo: media.images.dana,
-                isBank: false,
+                cardNumber: '4061 0102 7352 531',
+                logo: media.images.bri,
+                isBank: true,
                 isGift: false,
               },
               {
@@ -114,7 +114,7 @@ const Gift: NextPage = () => {
                 address:
                   'Jl. Panji Siliwangi No. 03, RT.15/RW.05, Dsn. Pajagan, Ds. Mekarwangi, Kec. Sukamantri, Kabupaten Ciamis',
                 cardNumber: '',
-                phoneNumber: '0821 2107 1220',
+                phoneNumber: '0858 6079 1601',
                 logo: '',
                 isBank: false,
                 isGift: true,

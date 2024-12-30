@@ -196,6 +196,7 @@ const theme = createTheme({
           '& .MuiBox-root': {
             width: 'max-content',
           },
+          color: 'black',
         },
         head: {
           fontWeight: 'bold',

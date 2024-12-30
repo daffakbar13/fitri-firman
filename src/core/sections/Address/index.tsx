@@ -136,8 +136,7 @@ const Address: NextPage = () => {
               transition={{ duration: 1.2 }}
             >
               <Typography className={fonts.montserrat.className}>
-                Jl. Panji Siliwangi No. 03, Mekarwangi, Kec. Sukamantri, Kabupaten Ciamis, Jawa
-                Barat 46264
+                GSG Sindangkerta,Rt 18/Rw 07 Dusun.Sindangkerta Desa.Hujungtiwu Kec.Panjalu
               </Typography>
             </motion.div>
           </Stack>
@@ -156,7 +155,7 @@ const Address: NextPage = () => {
         sx={{ backgroundColor: '#E6DED8' }}
       >
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.45525198317497!2d108.3430115042246!3d-7.093038806569349!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e6f40cf98213fff%3A0x4ff04f4dd6c69ee9!2sKantor%20Desa%20Mekarwangi!5e0!3m2!1sen!2sid!4v1733631498653!5m2!1sen!2sid"
+          src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d1835.5018156137505!2d108.26783938499963!3d-7.092829485045398!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zN8KwMDUnMzQuNSJTIDEwOMKwMTYnMDYuMSJF!5e0!3m2!1sid!2sid!4v1735526533880!5m2!1sid!2sid"
           width="100%"
           height="500"
           style={{ border: 0 }}

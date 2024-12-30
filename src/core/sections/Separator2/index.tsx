@@ -9,10 +9,10 @@ const Separator2: NextPage = () => {
 
   return (
     <Section
-      minHeight={620}
+      minHeight={420}
       width="100%"
       sx={{
-        backgroundImage: `url(${media.images.gallery22})`,
+        backgroundImage: `url(${media.images.gallery19})`,
         backgroundSize: 'cover',
       }}
     ></Section>

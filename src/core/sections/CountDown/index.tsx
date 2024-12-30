@@ -62,16 +62,19 @@ const CountDown: NextPage = () => {
         backgroundPosition: 'top center',
       }}
     >
-      {/* <Box
+      <Box
         position="absolute"
         top={0}
         left={0}
         width="100%"
         height="100%"
         sx={{
-          backgroundImage: 'linear-gradient(180deg, #E6DED88F 0%, #E6DED8 100%)',
+          backgroundImage: `url(${media.images.bg6})`,
+          backgroundRepeat: 'no-repeat',
+          backgroundSize: 'contain',
+          backgroundPosition: 'top center',
         }}
-      /> */}
+      />
       <Stack position="relative" width="100%" paddingY={7.5} paddingX={5} gap={2} zIndex={2}>
         <Box
           border="2px solid"
@@ -80,14 +83,12 @@ const CountDown: NextPage = () => {
           overflow="hidden"
           sx={{
             borderRadius: '200px 200px 0 0',
-            backgroundImage: `url(${media.images.bb})`,
+            backgroundImage: `url(${media.images.gallery4})`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
-            backgroundPosition: 'top center',
+            backgroundPosition: 'bottom center',
           }}
-        >
-          <img src="/videos/cinematic.mp4" alt="" />
-        </Box>
+        />
         <Stack flexDirection="row" gap={0.5}>
           {diff.map(([key, value], i) => (
             <React.Fragment key={i}>

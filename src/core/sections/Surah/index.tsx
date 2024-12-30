@@ -91,10 +91,10 @@ const Surah: NextPage = () => {
             gap={2}
             sx={{
               backgroundColor: '#E6DED8',
-              backgroundImage: `url(${media.images.bb})`,
+              backgroundImage: `url(${media.images.gallery9})`,
               backgroundRepeat: 'no-repeat',
               backgroundSize: 'cover',
-              backgroundPosition: 'bottom',
+              backgroundPosition: 'bottom right',
               pointerEvents: 'none',
             }}
           ></Box>

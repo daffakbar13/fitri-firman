@@ -15,14 +15,14 @@ const data = {
     shortName: 'Firman',
     childOrder: 3,
     father: {
-      name: 'Oding Abdul Kodir',
+      name: 'Abdul Rojak',
       isAlm: false,
     },
     role: 'cpp',
-    fullName: 'Firman Fauzi',
+    fullName: 'Ceceng Firman Nursaleh',
     gender: 'male',
     mother: {
-      name: 'Tuti Sumiati',
+      name: 'Ening',
       isAlm: false,
     },
   },
@@ -30,14 +30,14 @@ const data = {
     shortName: 'Fitri',
     childOrder: 1,
     father: {
-      name: 'Sakimun',
-      isAlm: false,
+      name: 'Maman',
+      isAlm: true,
     },
     role: 'cpw',
     fullName: 'Fitri Damayanti',
     gender: 'female',
     mother: {
-      name: 'Epa Nurjanah',
+      name: 'Cicih',
       isAlm: false,
     },
   },
@@ -82,10 +82,10 @@ const Profile: NextPage = () => {
                           height="100%"
                           borderRadius={1000}
                           sx={{
-                            backgroundImage: `url(${media.images[i ? 'profileFirman' : 'profileFitri']})`,
+                            backgroundImage: `url(${media.images[i ? 'gallery11' : 'gallery22']})`,
                             backgroundRepeat: 'no-repeat',
-                            backgroundSize: isMale ? '140%' : '200%',
-                            backgroundPosition: isMale ? 'center bottom' : '-190px bottom',
+                            backgroundSize: isMale ? '140%' : '160%',
+                            backgroundPosition: isMale ? 'left bottom' : '-150px -180px',
                           }}
                         />
                       </Box>
@@ -113,7 +113,7 @@ const Profile: NextPage = () => {
                       >
                         <Box>
                           <Typography className={fonts.crimson.className} fontSize={16}>
-                            {isMale ? 'Putra' : 'Putri'} ke - {current.childOrder}
+                            {isMale ? 'Putra' : 'Putri'} dari
                           </Typography>
                           <Typography className={fonts.crimson.className} fontSize={16}>
                             {(['father', 'mother'] as const)
@@ -149,7 +149,7 @@ const Profile: NextPage = () => {
                           onClick={() =>
                             window.open(
                               'https://instagram.com/'.concat(
-                                isMale ? 'ahmadfauzi7517' : 'lailatull2_',
+                                isMale ? 'ahmadfauzi7517' : 'ftridamayanti',
                               ),
                               '_blank',
                             )

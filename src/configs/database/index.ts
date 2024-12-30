@@ -13,7 +13,7 @@ export default async function database() {
   }
 
   if (!db) {
-    db = client.db('invitation2')
+    db = client.db('invitation3')
   }
 
   return db

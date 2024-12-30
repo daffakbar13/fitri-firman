@@ -1,16 +1,14 @@
 export default function Document() {
   return (
     <>
-      <link rel="preload" as="image" href="/images/background-1.jpg" type="image/jpg" />
       <link rel="preload" as="image" href="/images/background-2.jpg" type="image/jpg" />
       <link rel="preload" as="image" href="/images/background-3.webp" type="image/webp" />
-      <link rel="preload" as="image" href="/images/bca.png" type="image/png" />
+      <link rel="preload" as="image" href="/images/background-4.webp" type="image/jpg" />
+      <link rel="preload" as="image" href="/images/background-5.webp" type="image/jpg" />
+      <link rel="preload" as="image" href="/images/bri.svg" type="image/png" />
       <link rel="preload" as="image" href="/images/bg-bank.webp" type="image/webp" />
       <link rel="preload" as="image" href="/images/chip-atm.png" type="image/png" />
       <link rel="preload" as="image" href="/images/dana.png" type="image/png" />
-      <link rel="preload" as="image" href="/images/forest-1.jpg" type="image/jpg" />
-      <link rel="preload" as="image" href="/images/forest-3.webp" type="image/webp" />
-      <link rel="preload" as="image" href="/images/forest-6.jpg" type="image/jpg" />
       <link rel="preload" as="image" href="/images/gallery-1.jpg" type="image/jpg" />
       <link rel="preload" as="image" href="/images/gallery-2.jpg" type="image/jpg" />
       <link rel="preload" as="image" href="/images/gallery-3.jpg" type="image/jpg" />
@@ -33,16 +31,6 @@ export default function Document() {
       <link rel="preload" as="image" href="/images/gallery-20.jpg" type="image/jpg" />
       <link rel="preload" as="image" href="/images/gallery-21.jpg" type="image/jpg" />
       <link rel="preload" as="image" href="/images/gallery-22.jpg" type="image/jpg" />
-      <link rel="preload" as="image" href="/images/gallery-23.jpg" type="image/jpg" />
-      <link rel="preload" as="image" href="/images/gallery-24.jpg" type="image/jpg" />
-      <link rel="preload" as="image" href="/images/gallery-25.jpg" type="image/jpg" />
-      <link rel="preload" as="image" href="/images/IMG_7954.jpg" type="image/JPG" />
-      <link rel="preload" as="image" href="/images/IMG_8055.jpg" type="image/JPG" />
-      <link rel="preload" as="image" href="/images/IMG_8645.jpg" type="image/JPG" />
-      <link rel="preload" as="image" href="/images/profile-ahmad.webp" type="image/webp" />
-      <link rel="preload" as="image" href="/images/profile-illa-2.webp" type="image/webp" />
-      <link rel="preload" as="image" href="/images/profile-illa-3.webp" type="image/webp" />
-      <link rel="preload" as="image" href="/images/profile-illa.webp" type="image/webp" />
       <link rel="preload" as="audio" href="/audios/backsound.mp3" type="audio/mpeg" />
     </>
   )

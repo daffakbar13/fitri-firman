@@ -12,8 +12,9 @@ const Separator1: NextPage = () => {
       minHeight={620}
       width="100%"
       sx={{
-        backgroundImage: `url(${media.images.gallery20})`,
-        backgroundSize: 'cover',
+        backgroundImage: `url(${media.images.gallery1})`,
+        backgroundSize: '120%',
+        backgroundPosition: 'left bottom',
       }}
     ></Section>
   )

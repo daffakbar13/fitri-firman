@@ -43,7 +43,7 @@ const LoveStory: NextPage = () => {
           left={0}
           right={0}
           sx={{
-            backgroundImage: `url(${media.images.gallery3})`,
+            backgroundImage: `url(${media.images.gallery20})`,
             backgroundRepeat: 'no-repeat',
             backgroundSize: 'cover',
             backgroundPosition: 'bottom',
@@ -52,28 +52,27 @@ const LoveStory: NextPage = () => {
         />
       </Stack>
       <Typography className={fonts.crimson.className} fontSize={16} color="white" mt={4}>
-        Awal Bertemu
+        Pertemuan
         <br />
         <br />
-        Tidak ada yang kebetulan di dunia ini, semua sudah tersusun rapih oleh sang maha kuasa, kita
-        tidak bisa memilih kepada siapa kita akan bertemu, kami bertemu pada tahun 2020 ketika kami
-        bekerja. Kemudian kita saling berkenalan satu sama lain. Tidak ada yang pernah menyangka
-        bahwa pertemuan didunia itu membawa kami pada suatu ikatan cinta yang suci hari ini.
+        Tidak ada yang kebetulan di dunia ini,semua sudah tersusun rapih oleh sang maha kuasa. Kami
+        bertemu pada akhir tahun 2021,tidak ada rencana untuk bisa membina rumah tangga bersama
+        namun takdir yang sangat kuat membawa kami sampai ke titik ini.
         <br />
         <br />
-        Menjalin Hubungan
+        Menjalin hubungan
         <br />
         <br />
-        Kemudian pada tahun 2020 bulan Agustus kami mulai menjalin hubungan, sampai ahirnya kami
-        memutuskan untuk ke jenjang yang lebih serius yaitu pernikahan.
+        Setelah mejalin hubungan selama kurang lebih 2 tahun,Pada tahun 2024 kami memutuskan untuk
+        mempertemukan kedua keluarga dengan maksud ingin meminta restu untuk melangkahkan hubungan
+        ini ke jenjang yang lebih serius yaitu pernikahan.
         <br />
         <br />
         Pernikahan
         <br />
         <br />
-        Dan di tahun 2025 ini kami memutuskan untuk mengikat janji suci dalam pernikahan. Dalam
-        momen yang penuh cinta dan haru ini kami melangkah ke jenjang hidup baru menghadapi masa
-        depan bersama dengan saling menyayangi.
+        Percayalah,bukan karena berjodoh lalu bertemu,tetapi karena berjodoh kami di pertemukan.Atas
+        izin Allah tepat awal tahun 2025 kami akan melangsungkan janji suci pernikahan.
       </Typography>
     </Section>
   )

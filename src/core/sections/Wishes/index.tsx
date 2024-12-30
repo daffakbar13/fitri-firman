@@ -141,9 +141,15 @@ const Wishes: NextPage = () => {
             sx={{ textAlign: 'left' }}
             displayEmpty
           >
-            <MenuItem value={1}>Hadir</MenuItem>
-            <MenuItem value={2}>Tidak Hadir</MenuItem>
-            <MenuItem value={3}>Masih Bingung</MenuItem>
+            <MenuItem value={1} sx={{ color: 'black' }}>
+              Hadir
+            </MenuItem>
+            <MenuItem value={2} sx={{ color: 'black' }}>
+              Tidak Hadir
+            </MenuItem>
+            <MenuItem value={3} sx={{ color: 'black' }}>
+              Masih Bingung
+            </MenuItem>
           </Select>
           <Button
             fullWidth

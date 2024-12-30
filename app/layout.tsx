@@ -15,7 +15,7 @@ export const metadata: Metadata = {
     'the wedding of fitri & firman',
   ],
   icons: {
-    icon: '/images/gallery-25.jpg',
+    icon: '/images/gallery-4.jpg',
   },
 }
 
