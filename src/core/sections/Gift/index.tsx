@@ -112,7 +112,7 @@ const Gift: NextPage = () => {
               {
                 name: 'Fitri Damayanti',
                 address:
-                  'Jl. Panji Siliwangi No. 03, RT.15/RW.05, Dsn. Pajagan, Ds. Mekarwangi, Kec. Sukamantri, Kabupaten Ciamis',
+                  'Jl. Panji Siliwangi No. 03, RT.16/RW.05, Dsn. Pajagan, Ds. Mekarwangi, Kec. Sukamantri, Kabupaten Ciamis',
                 cardNumber: '',
                 phoneNumber: '0858 6079 1601',
                 logo: '',
