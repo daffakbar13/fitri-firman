@@ -85,7 +85,7 @@ const Profile: NextPage = () => {
                             backgroundImage: `url(${media.images[i ? 'gallery11' : 'gallery22']})`,
                             backgroundRepeat: 'no-repeat',
                             backgroundSize: isMale ? '140%' : '160%',
-                            backgroundPosition: isMale ? 'left bottom' : '-150px -180px',
+                            backgroundPosition: isMale ? 'left -120px' : '-150px -180px',
                           }}
                         />
                       </Box>
@@ -149,7 +149,7 @@ const Profile: NextPage = () => {
                           onClick={() =>
                             window.open(
                               'https://instagram.com/'.concat(
-                                isMale ? 'ahmadfauzi7517' : 'ftridamayanti',
+                                isMale ? 'ftridamayanti' : 'ftridamayanti',
                               ),
                               '_blank',
                             )
