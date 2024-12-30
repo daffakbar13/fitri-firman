@@ -127,7 +127,7 @@ const Address: NextPage = () => {
               transition={{ duration: 1.2 }}
             >
               <Typography className={fonts.montserrat.className} fontWeight="bold">
-                Aula Desa Mekarwangi
+                GSG Sindangkerta
               </Typography>
             </motion.div>
             <motion.div
