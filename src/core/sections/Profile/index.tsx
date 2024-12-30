@@ -146,7 +146,7 @@ const Profile: NextPage = () => {
                         onClick={() =>
                           window.open(
                             'https://instagram.com/'.concat(
-                              isMale ? 'ftridamayanti' : 'ftridamayanti',
+                              isMale ? 'frmnnurshaleh' : 'ftridamayanti',
                             ),
                             '_blank',
                           )
