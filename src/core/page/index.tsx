@@ -40,11 +40,13 @@ const Page: NextPage = () => {
   }
 
   React.useEffect(() => {
-    Promise.all([media.videos.opening, media.audios.backsound].map(hitFile)).then(() => {
+    Promise.all(
+      [media.videos.opening, media.videos.cinematic, media.audios.backsound].map(hitFile),
+    ).then(() => {
       Promise.all([
-        Promise.all(Object.values(media.audios).map(hitFile)),
+        // Promise.all(Object.values(media.audios).map(hitFile)),
         Promise.all(Object.values(media.images).map(hitFile)),
-        Promise.all(Object.values(media.videos).map(hitFile)),
+        // Promise.all(Object.values(media.videos).map(hitFile)),
       ])
     })
 
@@ -62,6 +64,7 @@ const Page: NextPage = () => {
     <Stack
       id="container"
       component="main"
+      position="relative"
       sx={{
         backgroundImage: `url(${media.images.bg2})`,
         backgroundRepeat: 'no-repeat',
@@ -79,7 +82,7 @@ const Page: NextPage = () => {
         muted
         playsInline
         style={{
-          position: 'fixed',
+          position: 'absolute',
           top: 0,
           left: 0,
           height: '100%',
