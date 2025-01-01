@@ -82,10 +82,10 @@ const Profile: NextPage = () => {
                           height="100%"
                           borderRadius={1000}
                           sx={{
-                            backgroundImage: `url(${media.images[i ? 'gallery11' : 'gallery22']})`,
+                            backgroundImage: `url(${media.images[i ? 'gallery11' : 'gallery10']})`,
                             backgroundRepeat: 'no-repeat',
-                            backgroundSize: isMale ? '140%' : '160%',
-                            backgroundPosition: isMale ? 'left -120px' : '-150px -180px',
+                            backgroundSize: isMale ? '140%' : 'cover',
+                            backgroundPosition: isMale ? 'left -120px' : 'top',
                           }}
                         />
                       </Box>
