@@ -1,4 +1,5 @@
 import Stack from '@mui/material/Stack'
+import useTheme from '@mui/material/styles/useTheme'
 import { NextPage } from 'next'
 import React from 'react'
 
@@ -16,7 +17,6 @@ import Opening from '../sections/Opening'
 import Separator1 from '../sections/Separator1'
 import Separator2 from '../sections/Separator2'
 import Wishes from '../sections/Wishes'
-import { useTheme } from '@mui/material'
 
 const Page: NextPage = () => {
   const { isOpenedInvitation, media, setIsFullScreen, setActiveScreen, closeInvitation, setMedia } =
