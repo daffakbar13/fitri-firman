@@ -17,13 +17,27 @@ const Opening: NextPage = () => {
   const opening = React.useRef<HTMLVideoElement>(null)
   const CdIcon = isPaused ? PlayCircleRounded : PauseCircleFilledRoundedIcon
 
+  const playOpening = async (video: HTMLVideoElement) => {
+    const MAX_TRY = 15
+    let tryCount = 0
+
+    if (video?.play) {
+      while (tryCount < MAX_TRY) {
+        console.log('Trying to play video')
+        try {
+          await video.play()
+          tryCount = MAX_TRY
+        } catch (err) {
+          console.error(err)
+          tryCount++
+        }
+      }
+    }
+  }
+
   React.useEffect(() => {
     if (opening.current) {
-      try {
-        opening.current.play()
-      } catch (err) {
-        null
-      }
+      playOpening(opening.current)
     }
   }, [opening.current])
 
