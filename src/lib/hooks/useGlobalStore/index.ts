@@ -15,7 +15,7 @@ const useGlobalStore = create<UseGlobalStore>((set, get) => ({
   media: {
     videos: {
       cinematic: '/videos/cinematic.mp4',
-      opening: '/videos/opening.mp4',
+      opening: '/videos/opening-fitri-firman.mp4',
     },
     audios: {
       backsound: '/audios/backsound.mp3',
