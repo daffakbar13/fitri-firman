@@ -14,7 +14,18 @@ import useGlobalStore from '@/lib/hooks/useGlobalStore'
 const Opening: NextPage = () => {
   const { media } = useGlobalStore()
   const [isPaused, setIsPaused] = React.useState(false)
+  const opening = React.useRef<HTMLVideoElement>(null)
   const CdIcon = isPaused ? PlayCircleRounded : PauseCircleFilledRoundedIcon
+
+  React.useEffect(() => {
+    if (opening.current) {
+      try {
+        opening.current.play()
+      } catch (err) {
+        null
+      }
+    }
+  }, [opening.current])
 
   return (
     <Section bgcolor="primary.main">
@@ -66,6 +77,7 @@ const Opening: NextPage = () => {
         </Stack>
       </motion.div>
       <video
+        ref={opening}
         id="opening-video"
         preload="auto"
         autoPlay

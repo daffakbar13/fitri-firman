@@ -33,8 +33,8 @@ const Page: NextPage = () => {
       return Promise.resolve()
     }
     return fetch(file, {
-      cache: 'force-cache',
-      next: { revalidate: 60 * 60 },
+      cache: 'no-cache',
+      // next: { revalidate: 60 * 60 },
     })
       .then((res) => res.blob())
       .then((blob) => setMedia(file, URL.createObjectURL(blob)))
