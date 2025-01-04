@@ -17,7 +17,7 @@ const Opening: NextPage = () => {
   const CdIcon = isPaused ? PlayCircleRounded : PauseCircleFilledRoundedIcon
 
   return (
-    <Section>
+    <Section bgcolor="primary.main">
       <motion.div
         style={{ position: 'absolute', top: 0, left: 0, width: '100%', height: '100%' }}
         initial={{ opacity: 0 }}

@@ -16,6 +16,7 @@ import Opening from '../sections/Opening'
 import Separator1 from '../sections/Separator1'
 import Separator2 from '../sections/Separator2'
 import Wishes from '../sections/Wishes'
+import { useTheme } from '@mui/material'
 
 const Page: NextPage = () => {
   const { isOpenedInvitation, media, setIsFullScreen, setActiveScreen, closeInvitation, setMedia } =
@@ -25,15 +26,15 @@ const Page: NextPage = () => {
     media.videos.cinematic,
     media.audios.backsound,
   ].every((e) => e.includes('blob'))
+  const theme = useTheme()
 
   async function hitFile(file: string) {
     if (file.includes('blob')) {
       return Promise.resolve()
     }
     return fetch(file, {
-      cache: 'no-cache',
-      // cache: 'force-cache',
-      // next: { revalidate: 60 * 60 * 24 * 30 * 12 },
+      cache: 'force-cache',
+      next: { revalidate: 60 * 60 },
     })
       .then((res) => res.blob())
       .then((blob) => setMedia(file, URL.createObjectURL(blob)))
@@ -43,11 +44,7 @@ const Page: NextPage = () => {
     Promise.all(
       [media.videos.opening, media.videos.cinematic, media.audios.backsound].map(hitFile),
     ).then(() => {
-      Promise.all([
-        // Promise.all(Object.values(media.audios).map(hitFile)),
-        Promise.all(Object.values(media.images).map(hitFile)),
-        // Promise.all(Object.values(media.videos).map(hitFile)),
-      ])
+      Promise.all(Object.values(media.images).map(hitFile))
     })
 
     document.onfullscreenchange = () => {
@@ -66,31 +63,34 @@ const Page: NextPage = () => {
       component="main"
       position="relative"
       sx={{
-        backgroundImage: `url(${media.images.bg2})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover',
-        backgroundPosition: 'center bottom',
         overflowX: 'hidden',
         overflowY: 'scroll',
       }}
     >
-      <video
+      <Stack
+        position="fixed"
+        top={0}
+        left={0}
+        alignItems="center"
         height="100vh"
-        preload="auto"
-        autoPlay
-        loop
-        muted
-        playsInline
-        style={{
-          position: 'absolute',
-          top: 0,
-          left: 0,
-          height: '100%',
-          pointerEvents: 'none',
-        }}
+        width="100vw"
+        sx={{ pointerEvents: 'none' }}
       >
-        <source src={media.videos.cinematic} type="video/mp4" />
-      </video>
+        <video
+          height="100%"
+          preload="auto"
+          autoPlay
+          loop
+          muted
+          playsInline
+          style={{
+            maxWidth: theme.breakpoints.values.lg,
+            objectFit: 'cover',
+          }}
+        >
+          <source src={media.videos.cinematic} type="video/mp4" />
+        </video>
+      </Stack>
       {(!isOpenedInvitation || !isContentLoaded) && <Cover />}
       {isOpenedInvitation && isContentLoaded && (
         <>

@@ -39,6 +39,7 @@ const Cover: NextPage = () => {
       justifyContent="end"
       pb={10}
       sx={{
+        backgroundColor: 'gray',
         backgroundImage: `url(${media.images.gallery18})`,
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
