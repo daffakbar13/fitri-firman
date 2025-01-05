@@ -14,12 +14,19 @@ export async function GET(_: NextRequest, { params }: Params) {
   const data = await guests.findOneAndUpdate({ _id: guestId }, { $inc: { seen: 1 } })
 
   if (data) {
-    viewHistories.insertOne({
-      guest_id: data._id,
-      name: data.name,
-      group_id: data.group_id,
-      created_at: new Date(),
-    })
+    await viewHistories.findOneAndUpdate(
+      {
+        guest_id: data._id,
+        group_id: data.group_id,
+      },
+      {
+        $set: {
+          name: data.name,
+          created_at: new Date(),
+        },
+      },
+      { upsert: true },
+    )
   }
 
   return new NextResponse(JSON.stringify({ data }), { status: 200 })
