@@ -40,6 +40,7 @@ const TabUcapan: React.FC = () => {
           >
             <Box display="flex" justifyContent="space-between">
               <Typography
+                color="black"
                 className={fonts.arimaMadurai.className}
                 fontSize={12}
                 fontWeight="bold"
@@ -58,10 +59,15 @@ const TabUcapan: React.FC = () => {
                 onClick={handleDeleteWish(wish.id)}
               />
             </Box>
-            <Typography className={fonts.arimaMadurai.className} fontSize={12}>
+            <Typography color="black" className={fonts.arimaMadurai.className} fontSize={12}>
               {wish.description}
             </Typography>
-            <Typography className={fonts.arimaMadurai.className} fontSize={10} textAlign="right">
+            <Typography
+              color="black"
+              className={fonts.arimaMadurai.className}
+              fontSize={10}
+              textAlign="right"
+            >
               {dayjs(wish.createdAt).fromNow()}
             </Typography>
           </Stack>
